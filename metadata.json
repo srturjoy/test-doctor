@@ -1,0 +1,8 @@
+{
+  "name": "Remix MINDSET Psychotherapy \u0026 Counseling Center",
+  "description": "MINDSET Psychotherapy \u0026 Counseling Center provides a safe and confidential space for psychotherapy, counseling and mental wellbeing support in Dhaka.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
