@@ -1,0 +1,311 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-en: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-bn: 'Hind Siliguri', 'Noto Sans Bengali', system-ui, sans-serif;
+    
+    /* Core Brand Palette - Dark Psychology Theme */
+    --color-deep-navy: #070B18;
+    --color-dark-navy: #0B1020;
+    --color-midnight: #11182D;
+    --color-soft-indigo: #25204A;
+    --color-royal-purple: #5B4BDB;
+    --color-purple-light: #8075E8;
+    --color-soft-lavender: #B9B3FF;
+    --color-light-lavender: #F4F2FF;
+    --color-warm-orange: #EA580C;
+    --color-warm-amber: #F97316;
+  }
+
+  html {
+    font-family: var(--font-en);
+    color-scheme: dark;
+    background-color: #070B18;
+    color: #F4F2FF;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
+  }
+
+  body {
+    background-color: #070B18;
+    color: #F4F2FF;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
+  }
+
+  #root {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
+  }
+
+  html[lang="bn"] {
+    font-family: var(--font-bn);
+  }
+
+  /* Smooth scroll offset for fixed header */
+  section {
+    scroll-margin-top: 5.5rem;
+  }
+}
+
+/* ========================================================= */
+/* 3D PERSPECTIVE & DEPTH SYSTEM                             */
+/* ========================================================= */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.perspective-1500 {
+  perspective: 1500px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.translate-z-6 {
+  transform: translateZ(24px);
+}
+
+.translate-z-12 {
+  transform: translateZ(48px);
+}
+
+/* ========================================================= */
+/* 3D SHADOWS & SPECULAR LIGHTING                           */
+/* ========================================================= */
+.shadow-3d-soft {
+  box-shadow:
+    0 10px 30px -10px rgba(11, 16, 32, 0.4),
+    0 4px 12px -2px rgba(91, 75, 219, 0.15),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.12);
+}
+
+.shadow-3d-deep {
+  box-shadow:
+    0 24px 48px -12px rgba(11, 16, 32, 0.6),
+    0 8px 24px -4px rgba(91, 75, 219, 0.2),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.shadow-3d-glow-orange {
+  box-shadow:
+    0 12px 28px -6px rgba(234, 88, 12, 0.35),
+    0 4px 10px -2px rgba(249, 115, 22, 0.2),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+.shadow-3d-glow-purple {
+  box-shadow:
+    0 12px 28px -6px rgba(91, 75, 219, 0.35),
+    0 4px 10px -2px rgba(185, 179, 255, 0.2),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+/* ========================================================= */
+/* GLASSMORPHISM SPECIFICATION                               */
+/* ========================================================= */
+.glass-panel-dark {
+  background: linear-gradient(
+    135deg,
+    rgba(17, 24, 45, 0.82) 0%,
+    rgba(11, 16, 32, 0.88) 100%
+  );
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(185, 179, 255, 0.14);
+}
+
+.glass-panel-dark-subtle {
+  background: rgba(17, 24, 45, 0.65);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-light {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 8px 24px -4px rgba(11, 16, 32, 0.06);
+}
+
+/* ========================================================= */
+/* CALM PSYCHOLOGY ANIMATIONS                                */
+/* ========================================================= */
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes pulseSubtle {
+  0%, 100% {
+    opacity: 0.95;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.02);
+  }
+}
+
+@keyframes breatheWave {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.4;
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 0.75;
+  }
+}
+
+@keyframes marqueeRTL {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes floatGentle1 {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes floatGentle2 {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(5px); }
+}
+
+@keyframes floatGentle3 {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-4px); }
+}
+
+@keyframes floatGentle4 {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(6px); }
+}
+
+.animate-float-slow {
+  animation: floatSlow 6s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: floatSlow 7s ease-in-out 2s infinite;
+}
+
+.animate-breathe {
+  animation: breatheWave 5s ease-in-out infinite;
+}
+
+.animate-marquee-rtl {
+  display: flex;
+  width: max-content;
+  animation: marqueeRTL 38s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee-rtl:hover,
+.animate-marquee-rtl:active,
+.animate-marquee-rtl:focus-within {
+  animation-play-state: paused;
+}
+
+.animate-float-1 {
+  animation: floatGentle1 7s ease-in-out infinite;
+}
+
+.animate-float-2 {
+  animation: floatGentle2 8s ease-in-out 1.2s infinite;
+}
+
+.animate-float-3 {
+  animation: floatGentle3 6.5s ease-in-out 2.4s infinite;
+}
+
+.animate-float-4 {
+  animation: floatGentle4 7.5s ease-in-out 3.6s infinite;
+}
+
+/* Soft horizontal edge fade for marquee rails */
+.mask-fade-edges {
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+/* Hide scrollbar for carousel while preserving swipe */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* ========================================================= */
+/* MOBILE-FIRST 3D & PERFORMANCE OPTIMIZATION (STEP 13)       */
+/* Tested across 360px, 390px, 430px, 768px, 1024px, 1280px, 1440px */
+/* ========================================================= */
+@media (max-width: 767px) {
+  /* Reduce heavy backdrop blurs to preserve mobile frame rate */
+  .glass-panel-dark {
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
+
+  .glass-panel-dark-subtle {
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+  }
+
+  .glass-panel-light {
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
+
+  /* Reduce secondary individual card float jitter on mobile while keeping specialist rail smooth */
+  .animate-float-1,
+  .animate-float-2,
+  .animate-float-3,
+  .animate-float-4 {
+    animation: none !important;
+  }
+
+  /* Slightly tighter edge mask on mobile screens */
+  .mask-fade-edges {
+    mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
+  }
+
+  /* Prevent oversized 3D perspective distortion on small screens */
+  .perspective-1000,
+  .perspective-1500 {
+    perspective: none !important;
+  }
+}
+
+/* Respect user's accessibility motion settings */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
